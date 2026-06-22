@@ -3,6 +3,7 @@ class Blob {
     this.track = track;
     this.offset = offset; // position along the track (0-1)
     this.speed = speed;   // how fast it moves along the track
+    this.speedRatio = speed / (track.speed || speed); // stable per-blob variance factor
     this.radius = 30;
     this.x = 0;
     this.y = 0;
