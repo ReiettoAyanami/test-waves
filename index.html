@@ -6,9 +6,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
   <style>
     body { margin: 0; overflow: hidden; }
+    #controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+      background: rgba(0,0,0,0.7);
+      padding: 14px 18px;
+      border-radius: 8px;
+      color: #fff;
+      font-family: monospace;
+      font-size: 12px;
+      min-width: 220px;
+      user-select: none;
+    }
+    #controls h3 { margin: 0 0 10px; font-size: 13px; color: #ffcc66; }
+    #controls label { display: block; margin: 6px 0 2px; }
+    #controls input[type=range] { width: 100%; }
+    #controls .val { float: right; color: #aaa; }
   </style>
 </head>
 <body>
+  <div id="controls"><h3>Wave Controls</h3></div>
   <script src="js/Blob.js"></script>
   <script src="js/Track.js"></script>
   <script src="js/Layer.js"></script>
