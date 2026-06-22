@@ -2,7 +2,7 @@ class Layer {
   constructor(depth, numTracks, config) {
     this.depth = depth;       // 0 = front, higher = back
     this.tracks = [];
-    this.alpha = map(depth, 0, 3, 255, 80); // further layers are more transparent
+    this.alpha = map(depth, 0, 3, 255, 80);
 
     for (let i = 0; i < numTracks; i++) {
       let centerY = height / 2 + (i - numTracks / 2) * 60 + depth * 30;
@@ -24,7 +24,7 @@ class Layer {
 
   draw() {
     for (let track of this.tracks) {
-      track.draw();
+      track.draw(this.alpha);
     }
   }
 

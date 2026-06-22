@@ -45,7 +45,7 @@ class Track {
     }
   }
 
-  draw() {
+  draw(alpha) {
     // Draw the track path for debugging
     stroke(255, 255, 255, 40);
     noFill();
@@ -58,7 +58,7 @@ class Track {
 
     // Draw blobs
     for (let blob of this.blobs) {
-      blob.draw();
+      blob.draw(alpha);
     }
   }
 

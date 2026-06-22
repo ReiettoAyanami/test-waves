@@ -31,9 +31,9 @@ class Blob {
     this.y = pos.y + this.yOffset;
   }
 
-  draw() {
+  draw(alpha) {
     noStroke();
-    fill(255, 100, 50, 150);
+    fill(255, 100, 50, alpha || 150);
     ellipse(this.x, this.y, this.radius * 2, this.radius * 2);
   }
 }

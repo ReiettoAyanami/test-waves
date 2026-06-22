@@ -32,7 +32,7 @@ class Outline {
     strokeWeight(1);
   }
 
-  // Simple convex hull using Graham scan approach
+  // Convex hull using gift wrapping (Jarvis march) algorithm
   _convexHull(points) {
     if (points.length < 3) return points;
 
